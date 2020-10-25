@@ -9,23 +9,68 @@
         xmlns:tools="http://schemas.android.com/tools">
 
         <TextView
-            android:id="@+id/high_text"
+            android:id="@+id/curr_info"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/card_margin"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/font_text_large"
+            android:text="@string/curr"
+            />
+
+        <TextView
+            android:id="@+id/high_info"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/card_margin"
+            android:layout_below="@+id/curr_info"
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@android:color/transparent"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/font_text_large"
-            tools:text="title"
+            android:text="@string/high"
             />
 
         <TextView
-            android:layout_margin="@dimen/standart_padding"
+            android:id="@+id/high_text"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/card_margin"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/curr_info"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/high_info"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_text_large"
+            android:text="title"
+            />
+
+        <TextView
+            android:id="@+id/low_info"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/card_margin"
+            android:layout_below="@+id/high_info"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font_text_standart"
+            android:text="@string/low"
+            />
+
+        <TextView
             android:id="@+id/low_text"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_below="@+id/title_text"
+            android:layout_margin="@dimen/card_margin"
+            android:layout_below="@+id/high_info"
+            android:layout_toRightOf="@+id/low_info"
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@android:color/transparent"

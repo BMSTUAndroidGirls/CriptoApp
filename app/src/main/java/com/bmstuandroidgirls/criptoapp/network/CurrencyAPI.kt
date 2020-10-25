@@ -179,7 +179,7 @@ interface CurrencyAPI {
 
     @GET("/data/v2/histoday")
     fun getCurrencies( @Query("api_key") apiKey: String?,
-        @Query("fsym") fsym: String?, @Query("tsym") tsym: String?
+        @Query("fsym") fsym: String?, @Query("tsym") tsym: String?, @Query("limit") limit: Int?
     ): Call<Example>?
 }
 

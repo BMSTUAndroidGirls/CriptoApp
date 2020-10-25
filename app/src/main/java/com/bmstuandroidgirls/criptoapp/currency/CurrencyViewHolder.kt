@@ -1,6 +1,8 @@
 package com.bmstuandroidgirls.criptoapp.currency
 
 import android.os.Bundle
+import android.preference.PreferenceManager
+import androidx.core.content.res.TypedArrayUtils.getString
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
@@ -19,7 +21,7 @@ class CurrencyViewHolder(val binding: CurrencyViewBinding, val fragment: Fragmen
                 cardSupportingText.text = cryptoData.low.toString()
                 cardButton.setOnClickListener {
                     val bundle = Bundle()
-                    bundle.putSerializable("card_info", CurrencyInfo(cryptoData.high.toString(), cryptoData.low.toString()))
+                    bundle.putSerializable("card_info", CurrencyInfo(PreferenceManager.getDefaultSharedPreferences(fragment.activity).getString(fragment.getString(R.string.currency_key), "USD")!!,cryptoData.high.toString(), cryptoData.low.toString()))
                     fragment.findNavController().navigate(R.id.navigation_currency, bundle)
                 }
             }

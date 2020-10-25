@@ -4,5 +4,7 @@
     <dimen name="font_text_standart">36sp</dimen>
     <dimen name="font_text_small">24sp</dimen>
     <dimen name="font_text_large">48sp</dimen>
-    <dimen name="card_margin">10dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="button_width">128dp</dimen>
+    <dimen name="button_height">64dp</dimen>
 </resources>

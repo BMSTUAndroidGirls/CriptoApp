@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -21,13 +21,41 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standart_padding"
+                android:text="@string/card_title_info"
+                android:id="@+id/card_title_info"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/colorPrimaryDark"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standart_padding"
+                android:layout_toRightOf="@+id/card_title_info"
                 android:text="@string/card_title"
                 android:id="@+id/card_title"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 />
             <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/card_title"
+                android:layout_margin="@dimen/standart_padding"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/card_margin"
+                android:text="@string/card_secondary_text_info"
+                android:id="@+id/card_secondary_text_info"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/card_title"
+                android:layout_margin="@dimen/standart_padding"
+                android:layout_toRightOf="@+id/card_secondary_text_info"
+                android:layout_gravity="center"
                 android:layout_marginTop="@dimen/card_margin"
                 android:text="@string/card_secondary_text"
                 android:id="@+id/card_secondary_text"
@@ -35,8 +63,24 @@
                 android:textColor="@android:color/black"
                 />
             <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/card_secondary_text"
+                android:layout_margin="@dimen/standart_padding"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/card_margin"
+                android:text="@string/card_supporting_text_info"
+                android:id="@+id/card_supporting_text_info"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_margin="@dimen/standart_padding"
+                android:layout_below="@+id/card_secondary_text"
+                android:layout_toRightOf="@+id/card_supporting_text_info"
+                android:layout_gravity="center"
                 android:layout_marginTop="@dimen/card_margin"
                 android:text="@string/card_supporting_text"
                 android:id="@+id/card_supporting_text"
@@ -44,7 +88,7 @@
                 android:textColor="@android:color/black"
                 />
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <!-- Buttons -->
         <LinearLayout
