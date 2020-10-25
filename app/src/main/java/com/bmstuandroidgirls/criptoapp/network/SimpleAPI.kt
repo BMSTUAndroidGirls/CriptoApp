@@ -40,8 +40,7 @@ interface SimpleAPI {
     }
 
     @GET("/data/price")
-    fun getCurrencies(
-        @Query("fsym") fsym: String?, @Query("tsyms") tsym: String?,
-        @Query("api_key") apiKey: String?
+    fun getCurrencies(  @Query("api_key") apiKey: String?,
+        @Query("fsym") fsym: String?, @Query("tsyms") tsym: String?
     ): Call<SimpleAPI.Example>
 }

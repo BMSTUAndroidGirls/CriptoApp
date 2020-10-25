@@ -8,6 +8,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
+import retrofit2.converter.jackson.JacksonConverterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 
@@ -28,7 +29,7 @@ class NetworkRequests {
         .build()
 
     fun getCurrencies() {
-        currencyApi?.getCurrencies( "BTC", "USD,JPY,EUR", API_KEY)?.enqueue(object : Callback<CurrencyAPI.Example> {
+        currencyApi?.getCurrencies(  API_KEY, "BTC", "USD")?.enqueue(object : Callback<CurrencyAPI.Example> {
                 override fun onResponse(
                     call: Call<CurrencyAPI.Example>,
                     response: Response<CurrencyAPI.Example>
@@ -45,7 +46,7 @@ class NetworkRequests {
     }
 
     fun getSimple() {
-        simpleApi?.getCurrencies( "BTC", "USD", API_KEY)?.enqueue(object : Callback<SimpleAPI.Example> {
+        simpleApi?.getCurrencies(  API_KEY, "BTC", "USD,JPY,EUR")?.enqueue(object : Callback<SimpleAPI.Example> {
             override fun onResponse(
                 call: Call<SimpleAPI.Example>,
                 response: Response<SimpleAPI.Example>
@@ -63,7 +64,7 @@ class NetworkRequests {
 
     init {
         val retrofit = Retrofit.Builder()
-            .addConverterFactory(MoshiConverterFactory.create())
+            .addConverterFactory(JacksonConverterFactory.create())
             .baseUrl(
                 HttpUrl.Builder().scheme(CONNECTION)
                     .host(NETWORK_HOST)

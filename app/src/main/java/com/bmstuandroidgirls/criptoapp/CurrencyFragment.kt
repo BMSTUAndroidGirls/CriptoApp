@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.bmstuandroidgirls.criptoapp.data.CurrencyInfo
 import com.bmstuandroidgirls.criptoapp.databinding.CurrencyFragmentBinding
 
 class CurrencyFragment : Fragment() {
@@ -19,8 +20,12 @@ class CurrencyFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding: CurrencyFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.currency_fragment, container, false)
-        binding.titleText.text = getString(R.string.app_default)
-        binding.randomText.text = getString(R.string.app_help)
+        val arguments = this.arguments
+        val currencyInfo: CurrencyInfo? = arguments!!.getSerializable("card_info") as CurrencyInfo?
+        if (currencyInfo != null) {
+            binding.highText.text = currencyInfo.high
+            binding.lowText.text = currencyInfo.low
+        }
         return binding.root
     }
 }
