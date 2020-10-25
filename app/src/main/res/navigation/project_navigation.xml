@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/project_navigation"
+    app:startDestination="@+id/navigation_start">
+
+    <fragment
+        android:id="@+id/navigation_start"
+        android:name="com.bmstuandroidgirls.criptoapp.currency.CurrencyListFragment"
+        android:label="Start fragment"
+        tools:layout="@layout/start_fragment" >
+        <action
+            android:id="@+id/to_settings"
+            app:popUpTo="@+id/navigation_settings">
+        </action>
+        <action
+            android:id="@+id/to_currency"
+            app:popUpTo="@+id/navigation_currency">
+        </action>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.bmstuandroidgirls.criptoapp.SettingsFragment"
+        android:label="Open map"
+        tools:layout="@layout/settings_fragment" >
+        <action
+            android:id="@+id/to_start"
+            app:popUpTo="@+id/navigation_start">
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_currency"
+        android:name="com.bmstuandroidgirls.criptoapp.CurrencyFragment"
+        android:label="Open web"
+        tools:layout="@layout/currency_fragment" >
+        <action
+            android:id="@+id/to_start"
+            app:popUpTo="@+id/navigation_start">
+        </action>
+
+    </fragment>
+
+</navigation>

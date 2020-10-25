@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CriptoApp</string>
+    <string name="app_default">Here should be currencies</string>
+    <string name="app_help"> maybe your internet connection lost?</string>
+    <string name="settings">settings</string>
+    <string name="settings_button">settings</string>
+    <string name="refresh_button">refresh</string>
+    <string name="card_button">open</string>
+    <string name="card_title">Hello</string>
+    <string name="card_secondary_text">Hello</string>
+    <string name="card_supporting_text">Hello</string>
+</resources>
