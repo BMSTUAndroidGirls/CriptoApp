@@ -38,7 +38,7 @@ class CurrencyListFragment : Fragment() {
                     adapter = CurrencyDataAdapter(this, data!!)
                     recyclerView.adapter = adapter
                 })
-                networkRequests.getSimple()
+                networkRequests.getCurrencies()
         } else {
             adapter = CurrencyDataAdapter(this, (data)!!)
             recyclerView.adapter = adapter

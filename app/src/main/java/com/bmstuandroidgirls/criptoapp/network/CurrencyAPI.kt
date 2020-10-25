@@ -26,9 +26,9 @@ interface CurrencyAPI {
         @JsonProperty("TimeTo")
         var timeTo = 0
 
-        @get:JsonProperty("com.bmstuandroidgirls.criptoapp.network.Data")
-        @set:JsonProperty("com.bmstuandroidgirls.criptoapp.network.Data")
-        @JsonProperty("com.bmstuandroidgirls.criptoapp.network.Data")
+        @get:JsonProperty("Data")
+        @set:JsonProperty("Data")
+        @JsonProperty("Data")
         var data: List<Datum>? = null
 
         @JsonIgnore
@@ -116,7 +116,7 @@ interface CurrencyAPI {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    @JsonPropertyOrder("Response", "Message", "HasWarning", "Type", "com.bmstuandroidgirls.criptoapp.network.RateLimit", "com.bmstuandroidgirls.criptoapp.network.Data")
+    @JsonPropertyOrder("Response", "Message", "HasWarning", "Type", "RateLimit", "Data")
     class Example {
         @get:JsonProperty("Response")
         @set:JsonProperty("Response")
@@ -138,14 +138,14 @@ interface CurrencyAPI {
         @JsonProperty("Type")
         var type = 0
 
-        @get:JsonProperty("com.bmstuandroidgirls.criptoapp.network.RateLimit")
-        @set:JsonProperty("com.bmstuandroidgirls.criptoapp.network.RateLimit")
-        @JsonProperty("com.bmstuandroidgirls.criptoapp.network.RateLimit")
+        @get:JsonProperty("RateLimit")
+        @set:JsonProperty("RateLimit")
+        @JsonProperty("RateLimit")
         var rateLimit: RateLimit? = null
 
-        @get:JsonProperty("com.bmstuandroidgirls.criptoapp.network.Data")
-        @set:JsonProperty("com.bmstuandroidgirls.criptoapp.network.Data")
-        @JsonProperty("com.bmstuandroidgirls.criptoapp.network.Data")
+        @get:JsonProperty("Data")
+        @set:JsonProperty("Data")
+        @JsonProperty("Data")
         var data: Data? = null
 
         @JsonIgnore
@@ -178,9 +178,8 @@ interface CurrencyAPI {
     }
 
     @GET("/data/v2/histoday")
-    fun getCurrencies(
-        @Query("fsym") fsym: String?, @Query("tsym") tsym: String?,
-        @Query("api_key") apiKey: String?
+    fun getCurrencies( @Query("api_key") apiKey: String?,
+        @Query("fsym") fsym: String?, @Query("tsym") tsym: String?
     ): Call<Example>?
 }
 

@@ -9,7 +9,7 @@
         xmlns:tools="http://schemas.android.com/tools">
 
         <TextView
-            android:id="@+id/title_text"
+            android:id="@+id/high_text"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
@@ -22,7 +22,7 @@
 
         <TextView
             android:layout_margin="@dimen/standart_padding"
-            android:id="@+id/random_text"
+            android:id="@+id/low_text"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_below="@+id/title_text"
