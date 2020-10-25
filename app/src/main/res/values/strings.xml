@@ -5,8 +5,29 @@
     <string name="settings">settings</string>
     <string name="settings_button">settings</string>
     <string name="refresh_button">refresh</string>
-    <string name="card_button">open</string>
+    <string name="card_button">show full</string>
     <string name="card_title">Hello</string>
     <string name="card_secondary_text">Hello</string>
     <string name="card_supporting_text">Hello</string>
+    <string name="select_currency">Select currency</string>
+    <string name="choose_day">Сhoose a day</string>
+    <string name="select_days_title">Select number of days</string>
+    <string name="days_summary">Select number of days</string>
+    <string name="select_currencies_title">Select currency</string>
+    <string name="currency_summary">Select currency</string>
+    <string name="back_button">back</string>
+    <string name="open_link">open site</string>
+    <string name="currency_key">currency_key</string>
+    <string name="days_key">days_key</string>
+    <string name="high">high</string>
+    <string name="low">low</string>
+    <string name="curr">currency</string>
+    <string name="card_title_info">time</string>
+    <string name="card_secondary_text_info">high</string>
+    <string name="card_supporting_text_info">low</string>
+    <string-array name="currency_array">
+        <item>USD</item>
+        <item>RUB</item>
+        <item>EUR</item>
+    </string-array>
 </resources>

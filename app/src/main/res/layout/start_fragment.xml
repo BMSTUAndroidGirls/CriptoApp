@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout
+    <LinearLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -10,36 +10,44 @@
         android:layout_gravity="center"
         xmlns:tools="http://schemas.android.com/tools">
 
+        <Button
+            android:id="@+id/open_link"
+            android:layout_height="@dimen/button_height"
+            android:layout_width="@dimen/button_width"
+            android:layout_gravity="center"
+            android:text="@string/open_link"
+            android:visibility="visible"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <TextView
-            android:id="@+id/title_text"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="@android:color/transparent"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/font_text_small"
-            tools:text="title"
-            />
+<!--        <TextView-->
+<!--            android:id="@+id/title_text"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:textColor="@color/colorAccent"-->
+<!--            android:textSize="@dimen/font_text_small"-->
+<!--            tools:text="title"-->
+<!--            />-->
 
-        <TextView
-            android:layout_margin="@dimen/standart_padding"
-            android:id="@+id/random_text"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_below="@+id/title_text"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="@android:color/transparent"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/font_text_small"
-            tools:text="text"
-            />
+<!--        <TextView-->
+<!--            android:layout_margin="@dimen/standart_padding"-->
+<!--            android:id="@+id/random_text"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_below="@+id/title_text"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="@dimen/font_text_small"-->
+<!--            tools:text="text"-->
+<!--            />-->
 
-    </RelativeLayout>
+    </LinearLayout>
 </layout>

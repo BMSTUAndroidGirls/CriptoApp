@@ -12,13 +12,15 @@ import retrofit2.converter.jackson.JacksonConverterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 
-class NetworkRequests {
+public class NetworkRequests (){
     companion object {
         private const val CONNECTION = "https"
         private const val NETWORK_HOST = "min-api.cryptocompare.com"
         private const val API_KEY =
             "600bf09ff8d82df6383db691c3873eb7fa6ea91651f8a33bfbd90dd2ddafcf4a"
     }
+    var days: Int = 10
+    var currency: String = "USD"
 
     val currenciesMutableLiveData: MutableLiveData<List<CurrencyAPI.Datum>? > =
         MutableLiveData<List<CurrencyAPI.Datum>?>()
@@ -29,7 +31,7 @@ class NetworkRequests {
         .build()
 
     fun getCurrencies() {
-        currencyApi?.getCurrencies(  API_KEY, "BTC", "USD")?.enqueue(object : Callback<CurrencyAPI.Example> {
+        currencyApi?.getCurrencies(  API_KEY, "BTC", currency, days)?.enqueue(object : Callback<CurrencyAPI.Example> {
                 override fun onResponse(
                     call: Call<CurrencyAPI.Example>,
                     response: Response<CurrencyAPI.Example>

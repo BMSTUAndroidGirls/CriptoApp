@@ -21,17 +21,17 @@
     </fragment>
 
 
-    <fragment
-        android:id="@+id/navigation_settings"
-        android:name="com.bmstuandroidgirls.criptoapp.SettingsFragment"
-        android:label="Open map"
-        tools:layout="@layout/settings_fragment" >
-        <action
-            android:id="@+id/to_start"
-            app:popUpTo="@+id/navigation_start">
-        </action>
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_settings"-->
+<!--        android:name="com.bmstuandroidgirls.criptoapp"-->
+<!--        android:label="Open map"-->
+<!--        tools:layout="@layout/settings_fragment" >-->
+<!--        <action-->
+<!--            android:id="@+id/to_start"-->
+<!--            app:popUpTo="@+id/navigation_start">-->
+<!--        </action>-->
 
-    </fragment>
+<!--    </fragment>-->
     <fragment
         android:id="@+id/navigation_currency"
         android:name="com.bmstuandroidgirls.criptoapp.CurrencyFragment"

@@ -1,17 +1,17 @@
 package com.bmstuandroidgirls.criptoapp
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.bmstuandroidgirls.criptoapp.data.CurrencyInfo
 import com.bmstuandroidgirls.criptoapp.databinding.CurrencyFragmentBinding
 
 class CurrencyFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
     }
 
     override fun onCreateView(
@@ -27,5 +27,18 @@ class CurrencyFragment : Fragment() {
             binding.lowText.text = currencyInfo.low
         }
         return binding.root
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_return, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menu_return -> {
+                findNavController().navigate(R.id.to_start)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
