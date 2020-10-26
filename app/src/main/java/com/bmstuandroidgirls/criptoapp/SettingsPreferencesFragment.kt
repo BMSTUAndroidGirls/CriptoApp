@@ -1,17 +1,29 @@
 package com.bmstuandroidgirls.criptoapp
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import com.bmstuandroidgirls.criptoapp.databinding.SettingsFragmentBinding
-import android.preference.PreferenceFragment
-import android.preference.PreferenceManager
-import android.preference.Preference
+import androidx.preference.EditTextPreference
+import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
 
-class SettingsPreferencesFragment : PreferenceFragment() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        addPreferencesFromResource(R.xml.preference)
+class SettingsPreferencesFragment : PreferenceFragmentCompat() {
+
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.preference, rootKey)
+        findPreference<EditTextPreference>(
+                getString(R.string.days_key)
+        )?.setOnPreferenceChangeListener { p, v ->
+            onPreferenceChange(p, v)
+        }
+    }
+
+     private fun onPreferenceChange(preference: Preference?, newValue: Any?): Boolean {
+        if (preference?.key == getString(R.string.days_key)) {
+            try {
+                val days = newValue.toString().toInt()
+                return days >= 0
+            } catch (nfe: NumberFormatException) {
+                return false
+            }
+        }
+        return true
     }
 }

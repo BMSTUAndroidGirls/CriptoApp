@@ -22,7 +22,6 @@ class CurrencyListFragment : Fragment() {
     private var data: ArrayList<CurrencyAPI.Datum>? = null
     private var networkRequests = NetworkRequests()
     private var url = "https://min-api.cryptocompare.com/documentation?key=Historical&cat=dataHistoday&api_key=600bf09ff8d82df6383db691c3873eb7fa6ea91651f8a33bfbd90dd2ddafcf4a"
-    private val MESSAGE = "com.bmstuandroidgirls.criptoapp.currency.MESSAGE"
 
 
 
@@ -79,11 +78,6 @@ class CurrencyListFragment : Fragment() {
         }
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-//        outState.putSerializable("data", data)
-    }
-
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_toolbar, menu)
         super.onCreateOptionsMenu(menu, inflater)
@@ -99,7 +93,6 @@ class CurrencyListFragment : Fragment() {
             R.id.menu_settings -> {
 //                findNavController().navigate(R.id.navigation_settings)
                 val intent = Intent(activity, PreferencesActivity::class.java).apply {
-                    putExtra(MESSAGE, "SETTINGS")
                 }
                 startActivity(intent)
                 return true
