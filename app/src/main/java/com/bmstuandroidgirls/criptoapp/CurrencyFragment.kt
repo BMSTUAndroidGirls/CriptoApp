@@ -25,6 +25,7 @@ class CurrencyFragment : Fragment() {
         if (currencyInfo != null) {
             binding.highText.text = currencyInfo.high
             binding.lowText.text = currencyInfo.low
+            binding.currInfo.text = currencyInfo.currency
         }
         return binding.root
     }
