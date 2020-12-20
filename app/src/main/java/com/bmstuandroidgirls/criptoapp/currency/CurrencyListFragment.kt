@@ -7,6 +7,7 @@ import android.preference.PreferenceManager
 import android.util.Log
 import android.view.*
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -58,7 +59,7 @@ class CurrencyListFragment : Fragment() {
         networkRequests.currency = PreferenceManager.getDefaultSharedPreferences(activity).getString(getString(R.string.currency_key), "USD")!!
         networkRequests.getCurrencies()
 
-        mainView.findViewById<Button>(R.id.open_link).setOnClickListener {
+        mainView.findViewById<ImageButton>(R.id.open_link).setOnClickListener {
             run {
                 openWebPage(url)
             }

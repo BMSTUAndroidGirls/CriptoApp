@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
+    android:textAppearance="@style/TextAppearance.CryptoApp.Body1"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <EditTextPreference
         android:key="@string/days_key"
         android:summary="@string/days_summary"
+        android:textSize="@dimen/font_text_standart"
         android:title="@string/select_days_title">
     </EditTextPreference>
     <ListPreference
@@ -11,6 +14,14 @@
         android:entryValues="@array/currency_array"
         android:key="@string/currency_key"
         android:summary="@string/currency_summary"
+        android:textSize="@dimen/font_text_standart"
         android:title="@string/select_currencies_title">
+    </ListPreference>
+    <ListPreference
+        android:entries="@array/themes_values"
+        android:entryValues="@array/themes_values"
+        android:key="@string/themes_key"
+        android:summary="@string/themes_summary"
+        android:title="@string/themes_title">
     </ListPreference>
 </PreferenceScreen>

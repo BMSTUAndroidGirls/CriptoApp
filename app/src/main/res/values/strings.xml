@@ -30,4 +30,9 @@
         <item>RUB</item>
         <item>EUR</item>
     </string-array>
+    <string name="theme1">Blue</string>
+    <string name="theme2">Green</string>
+    <string name="themes_key">theme_key</string>
+    <string name="themes_summary">The theme is:</string>
+    <string name="themes_title">Change theme</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
+    <RelativeLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -10,18 +10,32 @@
         android:layout_gravity="center"
         xmlns:tools="http://schemas.android.com/tools">
 
-        <Button
-            android:id="@+id/open_link"
-            android:layout_height="@dimen/button_height"
-            android:layout_width="@dimen/button_width"
-            android:layout_gravity="center"
-            android:text="@string/open_link"
-            android:visibility="visible"/>
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:id="@+id/open_link"
+            android:layout_height="@dimen/button_height"
+            android:layout_width="@dimen/button_height"
+            android:layout_marginRight="@dimen/button_margin"
+            android:padding="@dimen/standart_padding"
+            android:background="@drawable/button_round"
+            android:backgroundTint="?attr/colorAccent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:text="@string/open_link"
+            android:layout_above="@+id/empty_view"
+            android:src="@drawable/ic_launch_white_18dp"
+            android:visibility="visible"/>
+        <View
+            android:id = "@+id/empty_view"
+            android:layout_height = "@dimen/button_margin"
+            android:layout_width = "match_parent"
+            android:visibility="invisible"
+            android:layout_alignParentBottom="true"
+            />
 
 <!--        <TextView-->
 <!--            android:id="@+id/title_text"-->
@@ -49,5 +63,5 @@
 <!--            tools:text="text"-->
 <!--            />-->
 
-    </LinearLayout>
+    </RelativeLayout>
 </layout>
