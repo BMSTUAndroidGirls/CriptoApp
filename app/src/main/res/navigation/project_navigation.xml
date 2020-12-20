@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_start"
         android:name="com.bmstuandroidgirls.criptoapp.currency.CurrencyListFragment"
-        android:label="Start fragment"
+        android:label="Currencies info list"
         tools:layout="@layout/start_fragment" >
         <action
             android:id="@+id/to_settings"
@@ -16,8 +16,12 @@
         </action>
         <action
             android:id="@+id/to_currency"
-            app:popUpTo="@+id/navigation_currency">
-        </action>
+            app:destination="@id/navigation_currency"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/fragment_close_enter"
+            app:popExitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/navigation_currency" />
     </fragment>
 
 
@@ -35,7 +39,7 @@
     <fragment
         android:id="@+id/navigation_currency"
         android:name="com.bmstuandroidgirls.criptoapp.CurrencyFragment"
-        android:label="Open web"
+        android:label="Currency full information"
         tools:layout="@layout/currency_fragment" >
         <action
             android:id="@+id/to_start"

@@ -26,9 +26,9 @@ public class NetworkRequests (){
         MutableLiveData<List<CurrencyAPI.Datum>?>()
     private var currencyApi: CurrencyAPI? = null
     private var simpleApi: SimpleAPI? = null
-    private val okHttpClient: OkHttpClient = OkHttpClient()
-        .newBuilder()
-        .build()
+//    private val okHttpClient: OkHttpClient = OkHttpClient()
+//        .newBuilder()
+//        .build()
 
     fun getCurrencies() {
         currencyApi?.getCurrencies(  API_KEY, "BTC", currency, days)?.enqueue(object : Callback<CurrencyAPI.Example> {
@@ -72,7 +72,7 @@ public class NetworkRequests (){
                     .host(NETWORK_HOST)
                     .build()
             )
-            .client(okHttpClient)
+
             .build()
         currencyApi = retrofit.create<CurrencyAPI>(CurrencyAPI::class.java)
         simpleApi = retrofit.create(SimpleAPI::class.java)

@@ -22,7 +22,7 @@ class CurrencyViewHolder(val binding: CurrencyViewBinding, val fragment: Fragmen
                 cardButton.setOnClickListener {
                     val bundle = Bundle()
                     bundle.putSerializable("card_info", CurrencyInfo(PreferenceManager.getDefaultSharedPreferences(fragment.activity).getString(fragment.getString(R.string.currency_key), "USD")!!,cryptoData.high.toString(), cryptoData.low.toString()))
-                    fragment.findNavController().navigate(R.id.navigation_currency, bundle)
+                    fragment.findNavController().navigate(R.id.to_currency, bundle)
                 }
             }
         }

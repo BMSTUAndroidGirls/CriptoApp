@@ -16,8 +16,8 @@
             android:layout_margin="@dimen/card_margin"
             android:gravity="center"
             android:background="@android:color/transparent"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/font_text_large"
+            android:textAppearance="@style/TextAppearance.CryptoApp.Body1"
+            android:textSize="@dimen/font_text_standart"
             android:text="@string/curr"
             />
 
@@ -30,8 +30,8 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@android:color/transparent"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/font_text_large"
+            android:textAppearance="@style/TextAppearance.CryptoApp.Body1"
+            android:textSize="@dimen/font_text_standart"
             android:text="@string/high"
             />
 
@@ -45,8 +45,8 @@
             android:layout_toRightOf="@+id/high_info"
             android:gravity="center"
             android:background="@android:color/transparent"
-            android:textColor="@android:color/black"
-            android:textSize="@dimen/font_text_large"
+            android:textAppearance="@style/TextAppearance.CryptoApp.Body2"
+            android:textSize="@dimen/font_text_standart"
             android:text="title"
             />
 
@@ -59,7 +59,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@android:color/transparent"
-            android:textColor="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.CryptoApp.Body1"
             android:textSize="@dimen/font_text_standart"
             android:text="@string/low"
             />
@@ -74,7 +74,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:background="@android:color/transparent"
-            android:textColor="@android:color/black"
+            android:textAppearance="@style/TextAppearance.CryptoApp.Body2"
             android:textSize="@dimen/font_text_standart"
             tools:text="text"
             />

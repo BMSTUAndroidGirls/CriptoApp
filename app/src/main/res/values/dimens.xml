@@ -7,4 +7,5 @@
     <dimen name="card_margin">8dp</dimen>
     <dimen name="button_width">128dp</dimen>
     <dimen name="button_height">64dp</dimen>
+    <dimen name="button_margin">48dp</dimen>
 </resources>
